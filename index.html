@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "./external.css">
+    <style>
+
+        .videoContainer {
+            background-color: rgba(234, 230, 217, 0.689);
+            height : 500px; 
+            box-shadow: 5px 5px 15px rgba(57, 55, 47, 0.749);
+            display: flex;
+            justify-content: center;
+            margin: 200px 0px;
+        }
+
+        .video {
+            width: 500px;;
+            padding: 0;
+            transition: 0.6s;
+        }
+
+        .video:hover {
+            animation-name: video;
+            animation-duration: 2s;
+            transform: scale(1.5);
+            transition: 0.6s;
+        }
+
+        @keyframes video {
+            from {opacity: .9}
+            to {opacity: 1}
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 50px;
+            font-size: larger;
+        }
+
+        header h1 {
+            font-family: 'Alex Brush', cursive;
+            font-size: 150px;
+            font-weight: bold;
+        }
+
+        * {box-sizing:border-box;} 
+
+        .slideshow-container {
+            width: 100%;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .dot {
+            cursor: pointer; 
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        nav {
+            position : absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .sectionCounter {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+
+        #package1 {background-image: url("./images/packageDP/colomboDP.jpg");}
+        #package2 {background-image: url("./images/packageDP/dambulla.jpg");}
+        #package3 {background-image: url("./images/packageDP/galleDP.jpg");}
+        #package4 {background-image: url("./images/packageDP/Anuradhapura.jpg");}
+
+
+        #linkToComments {
+            background-color: black; 
+            text-align: end; 
+            margin: 100px 0px 100px 820px;
+            padding-right: 40px; 
+            line-height: 40px; 
+            border-top-left-radius: 20px; 
+            border-bottom-left-radius: 20px;
+        }
+
+        #linkToComments a {
+            text-decoration: none;
+            color: white;
+            transition: 0.6s ease;
+        }
+
+        #linkToComments a:hover {
+            color: rgba(255, 255, 255, 0.849);
+            transition: 0.6s ease;
+        }
+
+        #chatIcon {
+            width: 25px; 
+            margin: 10px 0px 10px 10px; 
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <!-- This is the navigation bar -->
+        <nav> 
+            <img src = "./images/CWlogo.png" style = "width: 120px; " alt = "ProjectLogo">
+            <div class="navBar">
+                <ul>
+                    <li><a class = "nav-items" href = "index.html">Home</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/vinul20221561.html">Products</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/mithila20221395.html">Gallery</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/aqeel20221691.html">Quiz</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/mithila20221395.html">Sitemap</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/aqeel20221691.html">About us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of navigation bar -->
+
+
+        <div class = "slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="./images/slideShow/slide1.jpg" style="width:100%; height: 100vh;" alt = "slide1image">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/slideShow/slide2.jpg" style="width:100%; height: 100vh;" alt = "slide2image">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/slideShow/slide3.jpg" style="width:100%; height: 100vh;" alt = "slide3image">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/slideShow/slide4.jpg" style="width:100%; height: 100vh;" alt = "slide4image">
+            </div>
+
+            <!-- Next and previous button navigation -->
+            <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots for navigation between slides-->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <header>
+        <h1>Ayubowan!</h1>
+    </header>
+
+        <!-- Section Counter and Introduction -->
+        <div style= "margin: 50px 0px;">
+            <div style = "background-color: rgba(252, 247, 241, 0.853); padding: 20px 100px;">
+                <p style = "margin: 20px 60px; line-height: 30px;"><span style = "font-size: 25px;">Welcome to Traveller's Guide</span> - your ultimate tour guide business centred in Sri Lanka. We offer enriching tours to various cities with attractive locations, showcasing the magic of diverse landscapes, cultural heritage, and wildlife encounters. With numerous awards, we pride ourselves on exceptional services, ensuring your safety and satisfaction. Let us be your trusted passport to unforgettable adventures on the breathtaking island of Sri Lanka.</p>
+            </div>
+        </div>
+    
+        <div class = "sectionCounter">
+            <div class = "section">
+                <img src = "./images/sectionCounter/rating.png" alt = "ratingIcon">
+                <p style = "text-align: center"> <span style = "font-size: 50px;">300+</span> <br>Happy customers</p>
+            </div>
+    
+            <div class = "section">
+    
+                <img src = "./images/sectionCounter/travel.png" alt = "travelIcon">
+                <p style = "text-align: center"> <span style = "font-size: 50px;">400+</span> <br>Trips</p>
+    
+            </div>
+        </div>
+
+
+    <div class = "videoContainer">
+        <video class="video" autoplay muted loop playsinline > 
+            <source src="./images/mainVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- Customer testimonials -->
+    <h2 class = "distance">See what our customers have to say,</h2>
+    <div class="testimonialsContainer">
+        <img src="./images/avartars/Mrak.png" alt="Avatar" style="width:90px">
+        <p><span>James Anthony</span> From United Kingdom 🇬🇧 .</p>
+        <p>Traveller's guide made our dream vacation a reality. Highly Recommended.</p>
+    </div>
+
+    <div class="testimonialsContainer">
+        <img src="./images/avartars/woman.png" alt="Avatar" style="width:90px">
+        <p><span >Clair John</span> From Australia 🇳🇿 .</p>
+        <p>I love adventure and Traveller's guide provided us the best service. Highly Recommended !!!</p>
+    </div>
+
+    <div class="testimonialsContainer">
+        <img src="./images/avartars/james.png" alt="Avatar" style="width:90px">
+        <p><span >James Lee.</span> From Canada 🇨🇦.</p>
+        <p>They are the best in the business. Loved the experience. Thank you!!</p>
+    </div>
+
+    <!-- Call to action section -->
+    <div style = "margin-bottom: 200px;">
+        <h2 class = "distance">Here's what we offer you</h2>
+        <div class = "offerContainer">
+            <div class = "offerImg" id = "package1" onclick= "contentPage('./sharm20222243Colombo.html')"><h2>Visit <br>Colombo</h2></div>
+            <div class = "offerImg" id = "package2" onclick="contentPage('./PageEditors/vinul20221561.html')"><h2>Visit<br>Dambulla</h2></div>
+            <div class = "offerImg" id = "package3" onclick="contentPage('./PageEditors/mithila20221395.html')"><h2>Visit <br>Galle</h2></div>
+            <div class = "offerImg" id = "package4" onclick="contentPage('./PageEditors/aqeel20221691.html')"><h2>Visit <br>Anuradhapura</h2></div>
+        </div>
+    </div>
+
+    <!-- Link to the comments form -->
+    <div>
+        <p id = "linkToComments"><img src = "./images/chat.png" id = "chatIcon" alt = "chatIcon"> <a  href="./comments.html">Please take a moment to provide your feedback on our site's performance</a></p>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class = "footer">
+            <p style="font-size: larger;"><strong><em>TRAVELLER'S GUIDE</em></strong></p>
+            <img style = "width: 10%;" src = "./images/CWlogo.png" alt = "CWlogo">
+            <p>-Your passport to unforgettable adventures-</p>
+            <img src = "./images/socials.png" style = "width: 12%" alt = "Social media Icons">
+        </div>
+
+        <div class = "editorsPage">
+            <input type = "button" class = "button" value = "Editor's page" onclick="editorsPage()">
+            <p>All Rights Reserved &copy; 2023 Traveller's Guide.</p>
+        </div>
+
+    </footer>
+
+    <script>
+
+        function contentPage(link) {
+            window.location = link;
+        }
+
+        function editorsPage() {
+            window.location = "./PageEditors/sharm20222243.html";
+        }
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Previous or next slide  
+        function changeSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Keeps track of the current slide and controls images
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+    </script>
+</body>
+</html>

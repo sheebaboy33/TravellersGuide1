@@ -1,0 +1,311 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+
+/* General CSS that gets applied to the Nav bar, footer and other common HTML tags */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'DM Serif Display', serif;
+}
+
+.navBar {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-items {
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+    font-size:large;
+    color : #f9f9f9;
+    margin: 25px;
+    text-decoration: none;
+}
+
+.frontView {
+    height: 100vh; 
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.nav-items:hover{
+    color : #02273C;
+    font-size: larger;
+    border-bottom: 2px solid black;
+    transition: 0.5s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #31498730;
+    border-bottom: 3px solid white;
+}
+
+.navBar ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.offerImg {
+    background-size: cover;
+    border: 5px solid black;
+    border-radius: 10%;
+    transition: 0.8s;
+}
+
+.offerImg:hover {
+    transform: translateY(-10px);
+    border: 10px solid rgb(234, 230, 217);
+    transition: 0.8s;
+}
+
+footer {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    background-color: rgba(230, 223, 215, 0.943);
+}
+
+.button {
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.875);
+    font-family: 'DM Serif Display', serif;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: rgba(230, 223, 215, 0.943);
+    transition: 0.5s;
+    transform: translateY(-3px);
+}
+
+
+
+/* Editor's Page CSS */
+.editorsPage {
+    background-color: rgb(255, 255, 255);
+}
+
+#picture {
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    width: 300px;
+    border-radius: 5%;
+}
+
+#introduction {
+    position: relative;
+    float: left;
+    top: 30px;
+    left: 360px;
+    font-family: 'DM Serif Display', serif;
+}
+
+.taskInfo{
+    position: relative;
+    clear: both;
+    top: 100px;
+    left: 40px;
+}
+
+.taskInfo li {
+    font-size: larger;
+    font-family: 'DM Serif Display', serif;
+    padding: 10px 0px;
+    color: rgb(94, 92, 92);
+}
+
+.studentInfoContainer {
+    background-color: rgba(228, 229, 239, 0.842); 
+    width: 900px; 
+    height: 920px; 
+    position: absolute;
+    left : 20%;
+    top: 18%;
+    border-radius: 3%;
+}
+
+.icons {
+    width: 30px;
+    padding-top: 20px;
+}
+
+.iconText {
+    display: inline-block;
+    width: 100px;
+    padding-top: 10px;
+}
+
+
+
+/* Content page CSS */
+
+.offerIntro {
+    text-align: center;
+    color: white;
+}
+
+.offer:hover {
+    transform: translateY(-8px);
+    transition: 0.5s;
+}
+
+.location p {
+    padding: 20px 10px;
+    text-align: center;
+    width: 50%;
+    font-size: smaller;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.849);
+    line-height: 25px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.location:hover p {
+    visibility: visible;
+}
+
+.location:hover{
+    transform: translateY(-8px);
+}
+
+.ourOfferContainer {
+    margin: 80px auto 150px auto;
+    width: 40%;
+} 
+
+.aboutLocation {
+    width: 600px;
+    line-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.colorContainer {
+    background-color: rgba(241, 224, 199, 0.296);
+    padding: 60px;
+    margin-top: 10px;
+}
+
+.headingName {
+    text-align: center; 
+    margin-top: 20px; 
+    font-family:  'Alex Brush', cursive; 
+    font-size: 100px;
+}
+
+#cityDescription {
+    padding-top: 40px; 
+    font-family:'DM Serif Display', serif ; 
+    color :rgba(42, 41, 41, 0.819)
+}
+
+.destinationsContainer, .location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.location {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    position: relative;
+    font-family: 'DM Serif Display', serif;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(57, 55, 47, 0.749);
+    margin: 50px 0px;
+    transition: 1s;
+}
+
+.location h3 {
+    background-color: rgba(241, 224, 199, 0.943);
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 380px;
+    line-height: 70px;
+    font-size: larger;
+}
+
+
+
+/* Main Page CSS */
+
+.section {
+    height: 250px;
+    width: 250px;
+    background-color: rgba(241, 224, 199, 0.633);
+    margin: 0px 100px;
+}
+
+.section img {
+    width: 100px;
+    margin: 15px 70px;
+}
+
+.offerContainer {
+    margin: 50px 0;
+    padding: 60px 55px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    background-color: rgba(234, 230, 217, 0.689);        
+    gap: 40px;
+    height: 500px;
+}
+
+.offerContainer h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 150px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(234, 230, 217, 0.491);
+}
+
+.testimonialsContainer {
+    border: 2px solid #d0c7a7;
+    background-color: rgba(241, 224, 199, 0.628);
+    border-radius: 2%;
+    padding: 20px;
+    margin: 20px 0;
+    height:150px;
+}
+
+.testimonialsContainer img {
+    float: left;
+    margin-right: 25px;
+    border-radius: 50%;
+}
+
+.testimonialsContainer span {
+    font-size: larger;
+    margin-right: 10px;
+}
+
+.distance {
+    font-family: 'Alex Brush', cursive; 
+    font-size: 60px; 
+    margin: 100px 50px;
+}

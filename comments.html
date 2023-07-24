@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Form - Traveller's Guide</title>
+    <link rel = "stylesheet" href = "external.css">
+    <style>
+
+        .questionContainer {
+            background-color: rgba(241, 224, 199, 0.628);
+            margin: 30px auto;
+            width: 800px;
+        }
+
+        .questionContainer p{
+            padding: 25px;
+        }
+
+        .question1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .radioChoice {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        .radioChoice label{
+            margin: 10px;
+        }
+
+        #ratingReason, #suggestions {
+            width: 95%;
+            height: 100px;
+            resize:vertical;
+            margin: 20px;
+        }
+
+        .dropDown {
+            width: 95%;
+            margin: 20px;
+            height: 30px;
+        }
+
+        #buttonPosition {
+            display: flex;
+            margin-bottom: 100px;
+        }
+
+        .validation {
+            background-color: rgb(200, 92, 92);
+            display: none;
+        }
+
+
+        .successful {
+            padding-top: 300px;
+            background-color: rgb(253, 252, 244);
+            height: 100vh;
+            text-align: center;
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav style = "background-color: rgb(161, 222, 240);"> 
+        <img src = "./images/CWlogo.png" style = "width: 120px; " alt = "ProjectLogo">
+        <div class="navBar">
+            <ul>
+                <li><a class = "nav-items" href = "index.html">Home</a></li>
+                <li><a class = "nav-items" href = "./PageEditors/vinul20221561.html">Products</a></li>
+                <li><a class = "nav-items" href = "./PageEditors/mithila20221395.html">Gallery</a></li>
+                <li><a class = "nav-items" href = "./PageEditors/aqeel20221691.html">Quiz</a></li>
+                <li><a class = "nav-items" href = "./PageEditors/mithila20221395.html">Sitemap</a></li>
+                <li><a class = "nav-items" href = "./PageEditors/aqeel20221691.html">About us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <form  name = "commentForm" id = "commentForm">
+        
+        <div class = "successful">
+            <img src = "images/celebrating.png" alt = "celebrating" style = "width: 50px;">
+            <h1 style="color: rgb(67, 160, 188);">Thank you!!</h1>
+            <p style="color: rgb(0, 0, 0);">Thank you for taking the time to give your feedback on your experience today.</p>
+        </div>
+        <div id = "successfulSubmission">
+            <div class="questionContainer">
+                <div class = "validation">
+                    <p style="color: white;"><img src = "./images/alert.png" style="width: 20px;" alt = "alertIcon">This question is required.</p>
+                </div>
+                <p>How satisfied were you with our website today? Choose from 0 to 10 <br>( 0 is extreamly dissatisfied and 10 is extreamly satisfied )</p><br>
+                <div class = "question1">
+                    <div class = "radioChoice">
+                        <label for="0">0</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "0" id = "0">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="1">1</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "1" id = "1">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="2">2</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "2" id = "2">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="3">3</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "3" id = "3">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="4">4</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "4" id = "4">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="5">5</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "5" id = "5">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="6">6</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "6" id = "6">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="7">7</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "7" id = "7">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="8">8</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "8" id = "8">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="9">9</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "9" id = "9">
+                    </div>
+
+                    <div class = "radioChoice">
+                        <label for="10">10</label>
+                        <input type = "radio" class = "radio" name = "rating" value = "10" id = "10">
+                    </div>
+                </div>
+            </div>
+
+            <div class="questionContainer">
+                <div class = "validation">
+                    <p style="color: white;"><img src = "./images/alert.png" style="width: 20px;" alt = "alertSign">This question is required.</p>
+                </div>
+                <p>Please could you tell us your reasons for giving this rating?</p>
+                <textarea id="ratingReason" name="ratingReason" placeholder="Please Use this space..." required></textarea>
+            </div>
+
+            <div class="questionContainer">
+                <p> How did you want to complete this task today? (optional)</p>
+                <select name="method" class = "dropDown" id="method">
+                    <option value="" selected>--Please Select--</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Website">Website</option>
+                    <option value="Webchat">Webchat</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Email">Email</option>
+                </select>
+            </div>
+
+            <div class="questionContainer">
+                <p>If you had to complete this task again, How would you prefer to do it? (optional)</p>
+                <select name="preferredMethod" class = "dropDown" id="preferredMethod">
+                    <option value="" selected >--Please Select--</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Website">Website</option>
+                    <option value="Webchat">Webchat</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Email">Email</option>
+                </select>
+            </div>
+
+            <div class="questionContainer">
+                <p>Any suggestions we could use to improve? (optional)</p>
+                <textarea id="suggestions" name="suggestions" placeholder="Please Use this space..."></textarea>
+            </div>
+
+            <div id ="buttonPosition">
+                <input type = "submit" id = "button" class = "button" value = "Submit" onclick="">
+            </div>
+        </div>
+
+    </form>
+    
+
+    <!-- This is the footer. Add the code to your other webpages too -->
+    <footer>
+        <div class = "footer">
+            <p style="font-size: larger;"><strong><em>TRAVELLER'S GUIDE</em></strong></p>
+            <img style = "width: 10%;" src = "./images/CWlogo.png" alt = "CWlogo">
+            <p>-Your passport to unforgettable adventures-</p>
+            <img src = "./images/socials.png" style = "width: 12%" alt = "Social media Icons">
+
+        </div>
+        <div class = "editorsPage">
+            <input type = "button" class = "button" value = "Editor's page" onclick = "editorsPage()">
+            <p>All Rights Reserved &copy; 2023 Traveller's Guide.</p>
+        </div>
+    </footer>
+    <!-- End of footer -->
+    <script>
+        function editorsPage() {
+            window.location = "./PageEditors/sharm20222243.html";
+        }
+
+        document.getElementById("button").addEventListener("click", submitInfo);
+
+        var lengthRadio = document.commentForm.getElementsByClassName("radio").length;
+
+        // Retrieving the rating given from the radio buttons
+        function getRating() {
+            for (var i = 0; i < lengthRadio; i++){
+                if (document.getElementsByClassName("radio")[i].checked){
+                    return i;
+                }
+            }
+        }
+
+        // Retrieving the reason for the given rating and suggestions
+        function getTextAreaData(idName) {
+            return document.getElementById(idName).value;
+        }
+
+
+        // Retrieving the preferred method and the current method of usage
+        function methodSelected(idName){
+                var index = document.getElementById(idName).selectedIndex;
+                var selection = document.getElementById(idName).options[index].innerText;
+                if (selection === "--Please Select--"){
+                        selection = "Not selected.";
+                }
+                return selection;
+        }
+
+        //Validating if the user has entered suggestion in the textfield
+        function getSuggestions(){
+                if (getTextAreaData("suggestions") === ""){
+                        return "No suggestions.";
+                }else {
+                        return getTextAreaData("suggestions");
+                }
+        }
+
+
+        function submitInfo() {
+            event.preventDefault(); // Gets rid of the default nature to be able to perform the validation
+
+
+            var rating = getRating();
+            var ratingReason = getTextAreaData("ratingReason");
+            var method = methodSelected("method");
+            var preferredMethod = methodSelected("preferredMethod");
+            var suggestions = getSuggestions();
+
+            if (rating == null && ratingReason == "") {
+                document.getElementsByClassName("validation")[0].style.display = "block";
+                document.getElementsByClassName("validation")[1].style.display = "block";
+            }
+
+            else if (rating == null) {
+                document.getElementsByClassName("validation")[0].style.display = "block";
+                document.getElementsByClassName("validation")[1].style.display = "none";
+            }
+
+            else if (ratingReason == "") {
+                document.getElementsByClassName("validation")[1].style.display = "block";
+                document.getElementsByClassName("validation")[0].style.display = "none";
+            }else {
+
+                var emailBody = "Rating given by the user: " + rating + "\nReason for the rating: " + ratingReason + "\nTask completed using: " + method + "\nPreferred method to perform the task: " + preferredMethod + "\nSuggestions: " + suggestions + " \n";
+
+                // Open the email client with pre-filled data
+                var email = "sharmfernando33@gmail.com";
+                var subject = "Feedback on Website"; 
+
+                // Combining the mailto link with the email body
+                var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
+
+                // Openning user's email with the pre-filled email
+                document.getElementById("successfulSubmission").style.display = "none";
+                document.getElementsByClassName("successful")[0].style.display = "block";
+                window.location.href = mailtoLink;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

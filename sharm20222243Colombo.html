@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colombo - Traveller's Guide</title>
+    <link rel = "stylesheet" href = "./external.css">
+    <style>
+
+        .frontViewText {
+            position: absolute;
+            top: 14%;
+            left: 20%;
+            background-color: rgba(108, 113, 129, 0.148);
+            border-radius: 50px;
+            text-align: center;
+            width: 800px;
+            color: white;
+            font-family: 'DM Serif Display', serif;
+            margin: 35px;
+            padding: 20px;
+        }
+
+        /* IMAGES OF THE LOCATIONS */
+        #location1{ background-image: url("./images/colombo/location1.jpeg"); }
+        #location2{ background-image: url("./images/colombo/location2.jpeg"); }
+        #location3{ background-image: url("./images/colombo/location3.jpeg"); }
+        #location4{ background-image: url("./images/colombo/location4.jpeg"); }
+
+        .offer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url("./images/offerImage.jpeg");
+            background-size: cover;
+            border-radius: 10px;
+            font-family:'DM Serif Display', serif;
+            margin-top: 40px;
+            box-shadow: 5px 5px 15px rgba(57, 55, 47, 0.749);
+            transition: all 0.5s ease;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.875);
+            border-radius: 10px;
+        }
+
+        tr, td, th{
+            padding: 20px 5px;
+            list-style-type: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="frontView" style="background-image: url(./images/colombo/colombo.jpg);">
+        <div class = "frontViewText">
+            <h1 style = "font-size: 80px;">Discover Colombo<br></h1>
+            <h2>-Unveil the Charms of Sri Lanka's Commercial Capital-</h2>
+        </div>
+        <!-- This is the navigation Bar.-->
+        <nav>
+            <img src = "./images/CWlogo.png" style = "width: 120px; " alt = "ProjectLogo">
+            <div class="navBar">
+                <ul>
+                    <li><a class = "nav-items" href = "index.html">Home</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/vinul20221561.html">Products</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/mithila20221395.html">Gallery</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/aqeel20221691.html">Quiz</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/mithila20221395.html">Sitemap</a></li>
+                    <li><a class = "nav-items" href = "./PageEditors/aqeel20221691.html">About us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Navigation bar -->
+
+    </div>
+
+    <!-- This is where you need to make changes. -->
+    <div class = "colorContainer">
+        <div class = "aboutLocation">
+            <!-- City name-->
+            <h2 class = "headingName">Colombo </h2>
+            <!-- Intro -->
+            <p id = "cityDescription">Sri Lanka's commercial capital, where modern architecture intertwines with rich historical heritage. With countless cultural landmarks, serene temples, and vibrant markets to explore, there's no shortage of places to visit.<br>Colombo offers a truly memorable experience for every traveller.</p>
+        </div>
+    </div>
+
+    <div class = "destinationsContainer">
+        <h2 style = "font-size: 30px;">Top Destinations</h2> 
+
+        <div class = "location" id = "location1">
+            <!-- Location 1-->
+            <h3>Gangaramaya Temple</h3>
+            <p>Located in Colombo, Gangaramaya Temple is a mesmerizing Buddhist complex, renowned for its rich architectural beauty and extensive collection of religious artefacts, offering visitors a serene escape and a glimpse into Sri Lanka's spiritual heritage.</p>
+        </div>
+
+        <div class = "location" id = "location2">
+            <!-- Location 2 -->
+            <h3>Colombo National Museum</h3>
+            <p>As the largest museum in Sri Lanka, the Colombo National Museum showcases a diverse range of historical and cultural exhibits, providing insights into the country's heritage, making it a must-visit for history enthusiasts.</p>
+        </div>
+
+        <div class = "location" id = "location3">
+            <!-- Location 3 -->
+            <h3>Mount Lavinia Beach</h3>
+            <p>Just outside Colombo, Mount Lavinia Beach offers a serene retreat with soft sandy shores and picturesque sunsets, making it a popular spot for relaxation.</p>
+        </div>
+
+        <div class = "location" id = "location4">
+            <!-- Location 4 -->
+            <h3>Viharamahadevi Park</h3>
+            <p>Situated in the heart of Colombo, Viharamahadevi Park is a tranquil oasis boasting lush greenery and a serene ambiance, perfect for leisurely strolls and family outings.</p>
+        </div>
+
+    </div>
+
+    <div class = "ourOfferContainer" >
+        <h2 class = "headingName">Here's our offer </h2>
+
+        <div class = "offer">
+            <!-- Introduction to the offer -->
+            <h3 class = "offerIntro" style="padding: 20px 0px; font-size: 25px;">Colombo City Tour - 3 day Package</h3>
+            <p class = "offerIntro" style="padding: 10px;">Our 3-day Colombo package offers a diverse and unforgettable journey through the city's top attractions, blending culture, relaxation, and scenic delights for an unforgettable Sri Lankan experience.</p>
+            <table>
+                <tr>
+                    <!-- Offer for the first day -->
+                    <th>Day 1: </th>
+                    <td>Gangaramaya Temple</td>
+                </tr>
+                <tr>
+                    <!-- Day 2 -->
+                    <th style = "vertical-align: top;">Day 2: </th>
+                    <td>
+                        <ul>
+                            <li>Colombo National Museum.</li>
+                            <li>Mount Lavinia Beach.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- Day 3 -->
+                    <th style = "vertical-align: top;">Day 3: </th>
+                    <td>
+                        <ul>
+                            <li>Viharamahadevi Park.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <input class = "button" type="button" value = "Proceed" onclick="productsPage()">
+        </div>
+    </div>
+
+    <!-- This is the footer. Add the code to your other webpages too -->
+    <footer>
+        <div class = "footer">
+            <p style="font-size: larger;"><strong><em>TRAVELLER'S GUIDE</em></strong></p>
+            <img style = "width: 10%;" src = "./images/CWlogo.png" alt = "CWlogo">
+            <p>-Your passport to unforgettable adventures-</p>
+            <img src = "./images/socials.png" style = "width: 12%" alt = "Social media Icons">
+
+        </div>
+        <div class = "editorsPage">
+            <input type = "button" class = "button" value = "Editor's page" onclick="editorsPage()">
+            <p>All Rights Reserved &copy; 2023 Traveller's Guide.</p>
+
+        </div>
+    </footer>
+    <!-- End of footer -->
+    <script>
+        function productsPage(){
+            window.location = "./PageEditors/vinul20221561.html";
+        }
+
+        function editorsPage(){
+            window.location = "./PageEditors/sharm20222243.html";
+        }
+    </script>
+
+</body>
+</html>
