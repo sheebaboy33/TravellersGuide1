@@ -10,3 +10,4 @@ Please note that my task for the assignment was to create;
 
   
 Tasks allocated to other members will only contain their editor's page info. 
+https://sheebaboy33.github.io/TravellersGuide1/
